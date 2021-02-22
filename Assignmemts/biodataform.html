@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style type="text/css">
+         body{
+         background-color:rgb(37, 35, 35);
+         color:rgb(236, 177, 177);
+         font-size:large;
+         font-family: Verdana;
+         }
+         input{
+         font-size:medium;
+         background-color:rgb(37, 35, 35);
+         border:5px 5px 5px 5px;
+         color:rgb(233, 233, 233);
+         border-color:rgb(236, 177, 177);
+         height: 3vh;
+         }
+         input::placeholder{
+         color:rgb(184, 181, 181);
+         }
+         select{
+         font-size: medium;
+         }
+         #radio-area input  {
+         width:1vw;
+         }
+         button{
+         font-size:large;
+         width:10vw;
+         height: 4vh;
+         }
+         #btn-container{
+         padding-left: 1vw;
+         }
+      </style>
+      <title>Form</title>
+   </head>
+   <body>
+      <h1>
+         My Bio Data
+      </h1>
+      <form action="" method="POST">
+         <fieldset>
+            <legend>&nbsp;&nbsp;  Personal Information  &nbsp;&nbsp;</legend>
+            <br>
+            <label for="fname"> FirstName : </label>
+            <input type="text" placeholder="First Name" id="fname">
+            <label for="lname">LastName : </label>
+            <input type="text" placeholder="Last Name" id="lname">
+            <br>
+            <br>
+            <div id="radio-area">
+               <label for="male">Male :</label>
+               <input type="radio" name="gender" id="male">
+               <label for="female">Female :</label>
+               <input type="radio" name="gender" id="female">
+               <label for="others">Others :</label>
+               <input type="radio" name="gender" id="others">
+            </div>
+            <br>
+            <label for="dob">Date of Birth :</label>
+            <input type="date" id="dob">
+            <br>
+            <br>
+            <label for="mailId">Email :</label>
+            <input type="email" id="mailId" placeholder="Please Enter Your Email">
+            <br>
+            <br>
+            <label for ="phNum">Phone :</label>
+            <input type="phone" id="phNum" placeholder="+91">
+            <br>
+            <br>
+            <label for="height">Height :</label>
+            <input type="number" id="height" step="0.1" placeholder="Height in Feet">
+         </fieldset>
+         <fieldset>
+            <legend>&nbsp;&nbsp; Education  &nbsp;&nbsp;</legend>
+            <label for="scName">School Name :</label>
+            <input type="text" id="scName" placeholder="School Name">
+            <br>
+            <br>
+            <label for="scClass">Class :</label>
+            <input type="text" id="scClass" placeholder="Enter Class">
+            <br>
+            <br>
+            <label for ="stream">Stream :</label>
+            <select id="stream" name="stream">
+               <option disabled selected >Select your option</option>
+               <option>Medical</option>
+               <option>Non-Medical</option>
+               <option>Commerce</option>
+               <option>Humanities</option>
+            </select>
+            <br>
+            <br>
+            <label for="mSheet">Marksheet :</label>
+            <input type="file">
+         </fieldset>
+         <br>
+         <div id="btn-container">
+         <button type="submit">Submit</button>
+         <div>
+      </form>
+   </body>
+</html>
