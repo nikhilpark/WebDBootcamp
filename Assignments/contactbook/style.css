@@ -1,0 +1,45 @@
+* {
+box-sizing: border-box;
+margin: 0;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+background-color:#2A2B2DFF
+}
+main {
+margin: 20px auto;
+width: 60vw;
+}
+h1 {
+margin:0 auto ;
+width: 24vw;
+text-align: center;
+color: white;
+}
+.list-heading{
+margin-top:10px;
+position:sticky;
+width:100%;
+top:-1px;
+color:rgb(51, 49, 49);
+background-color:white;
+}
+.list-heading::before{
+content: " \260E";
+}
+ul {
+margin: 20px;
+border: 1px solid white;
+}
+li{
+color:white;
+font-size:larger;
+border-bottom: 1px solid white;
+}
+li::first-letter{
+font-size:xx-large;
+}
+#footanchor{
+color:rgba(0, 255, 242, 0.726);
+text-decoration: none;
+}
