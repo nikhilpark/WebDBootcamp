@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./style.css">
+      <title>Hover Button</title>
+   </head>
+   <body>
+      <main>
+         <section id="container">
+            <div id="btn">
+               Hover me!
+            </div>
+         </section>
+      </main>
+      <script>
+         let btn = document.getElementById("btn");
+         let body = document.getElementsByName("body");
+         btn.addEventListener("mouseover",()=>{
+             let style = document.createElement('style');
+             style.innerHTML = "body{background-color: black;transition:background-color 1.5s ease-out;}";
+             document.head.appendChild(style);  
+             btn.innerHTML = "Thank you";
+         })
+         btn.addEventListener("mouseout",()=>{
+             let style = document.createElement('style');
+             style.innerHTML = "body{background-color: white;}";
+             document.head.appendChild(style); 
+             btn.innerHTML = "Hover me";
+         })
+      </script>
+   </body>
+</html>
