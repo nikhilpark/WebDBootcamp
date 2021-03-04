@@ -1,0 +1,26 @@
+body{
+background-color:white;
+}
+#btn{
+border:3px solid rgb(219, 34, 34);
+background-color:black;
+color:white;
+padding:10px;
+transition: border-radius 1s 1s ease-in, background-color 2s ease-out;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#container{
+display:flex;
+height:90vh;
+justify-content:center;
+align-items: center;
+}
+#btn:hover{
+border:3px solid rgb(87, 252, 72);
+cursor:pointer;
+-webkit-box-shadow: 1px 6px 62px 8px rgba(115,255,84,0.9);
+-moz-box-shadow: 1px 6px 62px 8px rgba(115,255,84,0.9);
+box-shadow: 1px 6px 62px 8px rgba(115,255,84,0.9);
+background-color: black;
+color:white;
+}
