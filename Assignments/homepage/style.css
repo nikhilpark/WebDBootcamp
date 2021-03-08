@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color:black;
+}
+nav{
+    background-color:#ccc;
+  
+}
+ul{
+    height:8vh;
+    list-style: none;
+    display:flex;
+    align-items: center;
+ 
+}
+li{
+    padding-left:20px;
+}
+
+li:nth-child(4){
+    position:absolute;
+    right:20px;
+}
+a{
+    text-decoration: none;
+    color:rgb(12, 104, 165)
+}
+a:hover{
+    color:rgb(2, 3, 56);
+}
+
+
+#cover-img{
+    height:72vh;
+    margin: 0 auto; 
+} 
+
+ #cf4a{
+     display: flex;
+     justify-content:center;
+     margin-top: 10px;
+}
+
+
+  #cf4a img {  
+    width:98vw;
+  
+    height:70vh;
+    position:absolute;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out; 
+  }
+  
+
+
+  #cf4a img{
+    animation-name: cf4FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    }
+
+@keyframes cf4FadeInOut {
+    0% {
+      opacity:1;
+    }
+    17% {
+      opacity:1;
+    }
+    25% {
+      opacity:0;
+    }
+    92% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  #cf4a img:nth-of-type(1) {
+    animation-delay: 6s;
+  }
+  #cf4a img:nth-of-type(2) {
+    animation-delay: 4s;
+  }
+  #cf4a img:nth-of-type(3) {
+    animation-delay: 2s;
+  }
+  #cf4a img:nth-of-type(4) {
+    animation-delay: 0;
+  }
+
+  #card-container{
+      display: flex;
+      width:100%;
+      margin: 0 auto; 
+      justify-content:center;
+      flex-wrap: wrap;
+  }
+  #card-container div{
+      min-width:270px;
+      height:25vh;
+      margin:10px;
+      flex-wrap: wrap;
+      background-color:#ccc;
+  }
+  #card-container div:hover{
+    transform:scale(1.1);
+  }
+#foot-container{
+    background-color:#ccc;
+    margin: 0 auto;
+    justify-content:center;
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #foot-container div{
+    margin:10px; 
+
+    min-width:300px;    
+  }
+  #foot-container div div{
+    margin: 0 auto;
+  }
+
+ 
