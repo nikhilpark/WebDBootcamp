@@ -1,0 +1,107 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#bg-container{
+    width: 100%;
+    min-height:45vh ;
+    background-image:url("../imgw.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    
+}
+#heading-container{
+   padding-top:10vh;
+}
+#heading-container span{
+    font-size:3.5rem;
+    background-color:#1c2a2d;
+    padding-left: 10px;
+    padding-right: 6px;
+    font-family: 'Bebas Neue', cursive;
+    color:#ccc;
+
+   
+}
+#s2 div{
+    display:flex;
+    justify-content:center;
+    margin-top:8vh;
+}
+#error{
+    font-size: 3rem;
+    color:red;
+}
+#ip-container{
+    display:flex;
+    justify-content:center;
+}
+#ipbox{
+    height:8vh;
+    min-width:30vw;
+    margin-top:10vh;
+    border-radius: 23px;
+    font-size: 2rem;
+    color:white;
+    text-align: center;
+    background-color:transparent;
+    border: 3px solid #ccc;
+    text-transform: capitalize;
+}
+::placeholder{
+    color:#ccc
+}
+#ipbox:hover{
+    border-color:#ccc;
+}
+#ipbox:focus{
+    outline:none
+}
+
+#temp-container{
+    display:flex;
+    justify-content:center;
+    margin-top:8vh;
+}
+#temp{
+    font-size: 4rem;
+}
+
+.icon-size{
+    width:35px;
+
+}
+.icon-size2{
+    width:45px;
+    opacity: 0.5;
+
+}
+#desc-container{
+    display:flex;
+    justify-content:center;
+    margin-top:6vh;
+}
+#desc-container div{
+    padding-left:6vw;
+    font-size:1.5rem;
+}
+
+#mm-container{
+
+    margin:0 auto;
+    margin-top:6vh;
+    font-size:1.5rem;
+    width: fit-content;
+}
+
+#mmt-container{
+  
+    margin:0 auto;
+    justify-content:center;
+    margin-top:2vh;
+    font-size:1.5rem;
+    width:fit-content;
+}
