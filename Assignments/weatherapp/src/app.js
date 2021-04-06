@@ -1,6 +1,7 @@
 const ipBox = document.querySelector("#ipbox")
+const s2 = document.querySelector("#s2")
 const s3 = document.querySelector("#s3")
-s3.style="display:none"
+
 
 ipBox.addEventListener("keyup", (e) => {
     if (e.keyCode == 13) {
@@ -26,7 +27,7 @@ function fetchApi(city) {
                 res.json()
                     .then(data => {let fetchedData=data
                         console.log(data);
-                        s2.style="display:none"
+                        
                         const wDesc = fetchedData.weather[0].main;
                         const temp = Math.round(fetchedData.main.temp -273.15) + "°C";
                         const minTemp = Math.round(fetchedData.main.temp_min -273.15) + "°C";
@@ -50,9 +51,8 @@ function fetchApi(city) {
                          
 
 
-
-
-                        s3.style="display:block;"
+                        s2.style=("display:none;")
+                        s3.style=("display:block;");
                         tempCont.innerText =  temp; 
                         descCont.innerText = wDesc;
                         windDirCont.innerText = windDir;
@@ -63,8 +63,9 @@ function fetchApi(city) {
                         
                     })
             } else {
-                let errorCont = document.querySelector("#error");
-                errorCont.innerText =  "An Error has Occured!"
+                    console.log("failed")
+                    s3.style=("display:none;")
+                    s2.style=("display:flex;")
             }
 
         })
