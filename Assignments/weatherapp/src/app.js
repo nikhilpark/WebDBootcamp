@@ -76,17 +76,18 @@ function compass(deg){
         let windDir = ""
     if (deg == 0 || deg == 360){
          windDir = "North"}
-        else if(90 > deg > 0){
-        windDir = "North-East"}
-        else if(deg === 90){
+        else if(deg>0 & deg<90){
+        windDir = "North-East"} 
+        else if(deg == 90){
         windDir = "East"}
-        else if (90 < deg < 180){
+        else if (deg>0 & deg<180){
         windDir = "South-East"}
-        else if (deg === 180){
-        windDir = "South"}
-        else if (180 < deg < 270){
+         else if (deg == 180){
+        windDir = "South"}      
+         else if ( deg>180 & deg < 270){
         windDir = "South-West"}
-        else if (270 < deg < 360){
+        else if ( deg>270 & deg < 360){
         windDir = "North-West"}
         return windDir
+}
 }
