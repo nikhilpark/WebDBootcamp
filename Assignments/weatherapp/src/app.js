@@ -90,4 +90,3 @@ function compass(deg){
         windDir = "North-West"}
         return windDir
 }
-}
