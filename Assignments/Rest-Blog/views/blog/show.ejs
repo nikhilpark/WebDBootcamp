@@ -1,0 +1,93 @@
+<%- include('partials/p1.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/show.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="blog">
+        <h1><%= blog.title %></h1>
+        <br>
+
+        <div id="img-cont">
+            <div>
+            <img src="<%= blog.image %>" alt="image"> 
+            </div>           
+        </div>
+
+        <h4 id="author">-<%= blog.author %></h2>
+                
+        <p id="content"><%= blog.content %></p>
+
+        <button type="button" class="btn btn-primary"> <a href="/blog/<%=blog.id%>/edit">Edit</a></button>
+
+        <form method="POST" action="/blog/<%= blog.id %>?_method=DELETE">       
+        <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+        <hr>
+        <h2>Add a comment:</h2>
+        <hr>
+
+        <form method="POST" action="/blog/<%= blog.id %>?_method=PUT">
+            <div id="comment-create-cont">
+            <div class="mb-3" id="input-cont">
+            <input name="title" class="form-control" placeholder="Title">
+            <br>
+            <textarea rows="2" class="form-control" name="comment" placeholder="Comment"></textarea>
+            <br>
+            <button class="btn btn-primary" type = submit > Submit</button>
+            </div>
+        </div>
+
+        </form>
+        <% if (blog.comments.length !== 0) { %>
+         
+        
+        <hr>
+        <h2>Comments:</h2>
+        <hr>
+        <div id="comment-section">
+              
+            <%for(let i of blog.comments){%>
+                <div id="comm-display-cont">
+                        <div>
+                            <div id="comment"> 
+                            <div id="user-cont">
+                            <h5><%= i.title %></h5>
+                            <span id="time-cont">&nbsp;.&nbsp;<%= i.date  %> </span>
+                        </div>
+                            <div id="comment-body">
+                            <span><%= i.comment %></span>
+                        </div>
+
+                      
+                       
+                    </div>
+                    
+                    
+            
+                    
+                </div>
+            
+            </div>
+            <hr>
+            <%}%>
+        </div>
+        <% } %>
+    
+    
+            
+        
+              
+            
+
+    </div>
+
+</body>
+</html>
